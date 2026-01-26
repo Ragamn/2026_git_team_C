@@ -1,0 +1,81 @@
+/* --- リセットCSS & 基本設定 --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    /* モバイルレイアウトをPCの中央に表示するための設定 */
+    max-width: 375px;
+    margin: 0 auto;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+/* --- Q&A エリア --- */
+.qa-container {
+    background-color: #f7f7f7;
+    /* 背景色（薄いグレー） */
+    padding-bottom: 40px;
+}
+
+/* ピンクのタイトルバー */
+.qa-title-bar {
+    background-color: #ea86c4;
+    /* スクリーンショットに近いピンク */
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+/* [よくある質問] 見出し */
+.main-heading {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 30px 0 20px;
+    color: #222;
+}
+
+/* --- カテゴリ見出し (チケットについて 等) --- */
+.category-title {
+    text-align: center;
+    margin: 30px 0 15px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+}
+
+.category-title span {
+    display: inline-block;
+    border-bottom: 1px solid #333;
+    /* 下線 */
+    padding-bottom: 2px;
+}
+
+/* --- Q&A リスト --- */
+.qa-list {
+    padding: 0 20px;
+}
+
+.qa-item {
+    margin-bottom: 25px;
+    font-size: 13px;
+    /* 文字サイズ調整 */
+}
+
+.question {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.answer {
+    color: #333;
+}
