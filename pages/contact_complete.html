@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ完了ページ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+
+        .content { flex-direction: column; }
+        .yoko { margin-left: 10%; margin-right: 10%; }
+
+        @media screen and (min-width: 1280px) { body { background-color: rgb(255, 255, 255); } }
+        @media screen and (min-width: 769px) and (max-width: 1279px) { body { background-color: rgb(255, 255, 255); } }
+        @media screen and (max-width: 768px) { body { background-color: rgb(255, 255, 255); } }
+
+        .st-finish-container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+        }
+
+        .st-finish-title-box {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+            border-bottom: 2px solid #333;
+        }
+
+        .st-finish-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0;
+            letter-spacing: 0.05em;
+        }
+
+  
+        .st-reply-text-box {
+            text-align: right;
+            margin-bottom: 50px;
+        }
+
+        .st-reply-text {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+
+        .st-btn-back {
+            display: inline-block;
+            background-color: #E55EC1;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 12px 60px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: opacity 0.2s;
+            margin-top: 40px;
+        }
+
+        .st-btn-back:hover {
+            opacity: 0.8;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        
+        <div class="st-finish-container">
+
+            <div class="st-finish-title-box">
+                <h1 class="st-finish-title">
+                    お問い合わせ完了しました！！
+                </h1>
+            </div>
+
+            <div class="st-reply-text-box">
+                <p class="st-reply-text">
+                    ３営業日以内に返信します。
+                </p>
+            </div>
+
+            <div>
+                <a href="index.html" class="st-btn-back">
+                    トップへ戻る
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
