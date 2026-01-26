@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中村蓮</title>
+    <style>
+       
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .maincolor {
+            color: #FFE1F4;
+            text-shadow: 1px 1px 2px #ccc;
+        }
+
+        .image {
+            width: 400px;
+            height: 200px;
+            margin: 0 auto;
+            margin-top: 50px;
+           
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .top-underline {
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            padding: 10px 0; 
+        }
+
+        .flex {
+            display: flex;
+            width: 100%;
+            max-width: 800px; 
+            margin: 0 auto 30px auto;
+        }
+
+       
+        .link-container {
+            position: relative; 
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        
+        .link-title {
+            position: absolute;
+            left: 0;
+        }
+
+        .link-title h3 {
+            margin: 0;
+        }
+
+       
+        .icon-area {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .icon-area img {
+             vertical-align: bottom;
+             transition: opacity 0.3s;
+        }
+
+        .icon-area a:hover img {
+            opacity: 0.7; 
+        }
+
+        
+        @media screen and (max-width: 375px) {
+            .content {
+                flex-direction: column;
+            }
+
+            p {
+                width: 100%;
+            }
+            
+            .image {
+                width: 100%; 
+            }
+
+            
+            .link-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .link-title {
+                position: static; 
+                width: 100%;
+                text-align: center; 
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="image">
+            <img src="../images/中村蓮.webp" alt="中村蓮">
+        </div>
+        
+        <h1 class="maincolor">中村蓮</h1>
+        
+        <div class="top-underline">
+            <p>5月3日(土) 15:00-15:40</p>
+            <p>メインステージ</p>
+        </div>
+        
+        <h3>【BIOGRAPHY】</h3>
+        <p>リリカルなラップスタイルと、自身で制作するトラックが特徴の若手ラッパー。
+日常の葛藤や希望をテーマにした等身大の歌詞が、同世代から強く共感される。
+2023年にリリースしたミックステープ「蓮華」がストリーミングで100万再生を突破。
+ライブではトラックメイキングの実演も行い、音楽制作の面白さを伝えている。
+</p>
+        
+        <h3>【GENRE】</h3>
+        <p>ヒップホップ/ラップ</p>
+
+        <h3>【SONGS】</h3>
+        <div>
+            <p>蓮の花</p>
+            <p>東京ストーリー</p>
+            <p>新しい朝</p>
+        </div>
+
+        <div class="flex top-underline link-container">
+            <div class="link-title">
+                <h3>【LINK】</h3>
+            </div>
+            
+            <div class="icon-area">
+                <a href="#"><img src="../images/icons8-ツイッターx-50.webp" alt="X"></a>
+                <a href="#"><img src="../images/icons8-インスタグラム-48.webp" alt="Instagram"></a>
+                <a href="#"><img src="../images/icons8-プレイ動画-48.webp" alt="Movie"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
