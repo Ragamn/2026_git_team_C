@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Groove</title>
+    <style>
+       
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .maincolor {
+            color: #FFE1F4;
+            text-shadow: 1px 1px 2px #ccc;
+        }
+
+        .image {
+            width: 400px;
+            height: 200px;
+            margin: 0 auto;
+            margin-top: 50px;
+           
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .top-underline {
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            padding: 10px 0; 
+        }
+
+        .flex {
+            display: flex;
+            width: 100%;
+            max-width: 800px; 
+            margin: 0 auto 30px auto;
+        }
+
+       
+        .link-container {
+            position: relative; 
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        
+        .link-title {
+            position: absolute;
+            left: 0;
+        }
+
+        .link-title h3 {
+            margin: 0;
+        }
+
+       
+        .icon-area {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .icon-area img {
+             vertical-align: bottom;
+             transition: opacity 0.3s;
+        }
+
+        .icon-area a:hover img {
+            opacity: 0.7; 
+        }
+
+        
+        @media screen and (max-width: 375px) {
+            .content {
+                flex-direction: column;
+            }
+
+            p {
+                width: 100%;
+            }
+            
+            .image {
+                width: 100%; 
+            }
+
+            
+            .link-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .link-title {
+                position: static; 
+                width: 100%;
+                text-align: center; 
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="image">
+            <img src="../images/VelvetGroove.webp" alt="Velvet Groove">
+        </div>
+        
+        <h1 class="maincolor">Velvet Groove</h1>
+        
+        <div class="top-underline">
+            <p>5月3日(土) 13:00-13:40 / 16:00-16:40</p>
+            <p>サブステージ</p>
+        </div>
+        
+        <h3>【BIOGRAPHY】</h3>
+        <p>サックス、ピアノ、ベース、ドラムの4人編成によるジャズバンド。
+クラシカルなジャズをベースに、現代的なグルーヴ感を取り入れたサウンドが魅力。
+ジャズクラブでの演奏を中心に活動し、即興演奏の高い技術力で知られる。
+「ベルベットのように滑らかなグルーヴ」という名前の通り、
+心地よいリズムとメロディで聴く人を魅了する。フェスでは昼下がりにぴったりの演奏を。
+</p>
+        
+        <h3>【GENRE】</h3>
+        <p>ジャズ/フュージョン</p>
+
+        <h3>【SONGS】</h3>
+        <div>
+            <p>Smooth Breeze</p>
+            <p>Velvet Sky</p>
+            <p>Spring Serenade</p>
+        </div>
+
+        <div class="flex top-underline link-container">
+            <div class="link-title">
+                <h3>【LINK】</h3>
+            </div>
+            
+            <div class="icon-area">
+                <a href="#"><img src="../images/icons8-ツイッターx-50.webp" alt="X"></a>
+                <a href="#"><img src="../images/icons8-インスタグラム-48.webp" alt="Instagram"></a>
+                <a href="#"><img src="../images/icons8-プレイ動画-48.webp" alt="Movie"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
