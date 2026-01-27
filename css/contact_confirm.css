@@ -1,0 +1,68 @@
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+        }
+
+        /* 357px固定 */
+        .app-wrapper {
+            width: 357px;
+        }
+
+        .step span {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .step .active {
+            color: #e83e8c;
+            font-weight: bold;
+        }
+
+        .content-box {
+            background-color: transparent;
+            height: 220px;
+
+            display: flex;
+            flex-direction: column;
+            /* 縦並び */
+            align-items: flex-start;
+            /* ← 左寄せ */
+            justify-content: flex-start;
+            /* ← 上寄せ */
+
+            font-size: 16px;
+            color: #333;
+        }
+
+
+
+        .btn-submit {
+            background-color: #f7a1c4;
+            border: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #e86aa3;
+        }
+
+        .info-row {
+            display: flex;
+            margin-bottom: 8px;
+        }
+
+        .label {
+
+            width: 160px;
+            text-align: left;
+            /* ←ここで揃う！ */
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .value {
+            flex: 1;
+            /* ← ここ重要 */
+            text-align: left;
+        }
