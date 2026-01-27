@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Echoes</title>
+    <style>
+       
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .maincolor {
+            color: #FFE1F4;
+            text-shadow: 1px 1px 2px #ccc;
+        }
+
+        .image {
+            width: 400px;
+            height: 200px;
+            margin: 0 auto;
+            margin-top: 50px;
+           
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .top-underline {
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            padding: 10px 0; 
+        }
+
+        .flex {
+            display: flex;
+            width: 100%;
+            max-width: 800px; 
+            margin: 0 auto 30px auto;
+        }
+
+       
+        .link-container {
+            position: relative; 
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        
+        .link-title {
+            position: absolute;
+            left: 0;
+        }
+
+        .link-title h3 {
+            margin: 0;
+        }
+
+       
+        .icon-area {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .icon-area img {
+             vertical-align: bottom;
+             transition: opacity 0.3s;
+        }
+
+        .icon-area a:hover img {
+            opacity: 0.7; 
+        }
+
+        
+        @media screen and (max-width: 375px) {
+            .content {
+                flex-direction: column;
+            }
+
+            p {
+                width: 100%;
+            }
+            
+            .image {
+                width: 100%; 
+            }
+
+            
+            .link-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .link-title {
+                position: static; 
+                width: 100%;
+                text-align: center; 
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="image">
+            <img src="../images/MorningEchoes.webp" alt="Morning Echoes">
+        </div>
+        
+        <h1 class="maincolor"></h1>
+        
+        <div class="top-underline">
+            <p>5月3日(土) 12:00-12:40 / 15:00-15:40</p>
+            <p>メインステージ</p>
+        </div>
+        
+        <h3>【BIOGRAPHY】</h3>
+        <p>男女2人組のフォークデュオ。アコースティックギターとハーモニーを中心とした、
+温かみのあるサウンドが特徴。2人の息の合ったハーモニーは「朝の木漏れ日のよう」と評される。
+カフェやライブハウスでの活動を経て、2023年にメジャーデビュー。
+日常の何気ない幸せを歌った楽曲が、幅広い年齢層から支持を集めている。
+今回のフェスでは野外の開放的な空間で、心地よい音楽を届ける。</p>
+        
+        <h3>【GENRE】</h3>
+        <p>フォーク/アコースティック</p>
+
+        <h3>【SONGS】</h3>
+        <div>
+            <p>朝の光</p>
+            <p>二人の道</p>
+            <p>コーヒーと君</p>
+        </div>
+
+        <div class="flex top-underline link-container">
+            <div class="link-title">
+                <h3>【LINK】</h3>
+            </div>
+            
+            <div class="icon-area">
+                <a href="#"><img src="../images/icons8-ツイッターx-50.webp" alt="X"></a>
+                <a href="#"><img src="../images/icons8-インスタグラム-48.webp" alt="Instagram"></a>
+                <a href="#"><img src="../images/icons8-プレイ動画-48.webp" alt="Movie"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
