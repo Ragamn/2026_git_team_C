@@ -187,10 +187,10 @@ body {
 .nav.mobile-open {
     display: block;
     position: fixed;
-    top: 70px;
+    top: 60px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 50px);
     background: rgba(255, 255, 255);
     backdrop-filter: blur(10px);
     animation: slideDown 0.3s ease;
