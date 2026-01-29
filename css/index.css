@@ -8,7 +8,6 @@
 /* ヒーローセクション */
 .hero {
     position: relative;
-    height: 25vh;
     min-height: 150px;
     overflow: hidden;
 }
@@ -62,7 +61,7 @@
 
 /* ニュースセクション */
 .news-section {
-    padding: 2rem 0;
+    padding: 1rem 0;
     background-color: #fff;
 }
 
@@ -102,7 +101,7 @@
 
 /* アーティストセクション */
 .artists-section {
-    padding: 2rem 0;
+    padding: 1rem 0;
     background-color: #fff;
 }
 
@@ -249,7 +248,7 @@
 
 /* グッズセクション */
 .goods-section {
-    padding: 2rem 0;
+    padding: 1rem 0;
     background-color: #fff;
 }
 
@@ -313,10 +312,6 @@
     .artists-grid,
     .goods-grid {
         grid-template-columns: repeat(4, 1fr);
-    }
-    
-    .hero {
-        height: 40vh;
     }
     
     .logo-img {
