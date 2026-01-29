@@ -3,12 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q&A Page</title>
+    <title>よくある質問 - Spring Music Festival '26</title>
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/faq.css">
 </head>
 <body>
+  <!-- 左サイドメニュー（タブレット以上で表示） -->
+  <nav class="side-nav side-nav-left">
+    <div class="side-nav-content">
+      <div class="side-nav-item">
+        <a href="../index.html">TOP</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="performer_list.html">NEWS</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="performer_list.html">ARTISTS</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="timetable.html">TIMETABLE</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="ticket.html">TICKET</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </nav>
 
-    <div class="qa-container">
+  <!-- 右サイドメニュー（タブレット以上で表示） -->
+  <nav class="side-nav side-nav-right">
+    <div class="side-nav-content">
+      <div class="side-nav-item">
+        <a href="goods.html">GOODS</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="venue.html">ACCESS</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="guide.html">GUIDELINE</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="contact_form.html">CONTACT</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="privacy.html">PRIVACY POLICY</a>
+      </div>
+      <div class="side-nav-item official-store">
+        <a href="goods.html">OFFICIAL STORE></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-container">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <h1>Spring Music Festival '26</h1>
+          <p class="date">MAY 2 SAT 3 SUN グリーンパーク野外ステージ</p>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="../index.html">ホーム</a></li>
+            <li><a href="timetable.html">タイムテーブル</a></li>
+            <li><a href="ticket.html">チケット情報</a></li>
+            <li><a href="performer_list.html">出演者一覧</a></li>
+            <li><a href="venue.html">会場案内</a></li>
+            <li><a href="goods.html">グッズ紹介</a></li>
+            <li><a href="guide.html">来場者ガイド</a></li>
+            <li><a href="faq.html">よくある質問</a></li>
+            <li><a href="contact_form.html">お問い合わせ</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+      <div class="qa-container">
         <div class="qa-title-bar">Q&A</div>
 
         <h2 class="main-heading">[よくある質問]</h2>
@@ -118,7 +198,41 @@
             </div>
 
         </div>
+      </div>
+    </main>
+
+    <!-- 固定チケットボタン -->
+    <div class="ticket-button-fixed">
+      <a href="ticket.html">
+        <span class="ticket-text">TICKET</span>
+      </a>
     </div>
 
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <a href="../index.html">トップ</a>
+          <a href="performer_list.html">出演者一覧</a>
+          <a href="timetable.html">タイムテーブル</a>
+          <a href="goods.html">グッズ紹介</a>
+          <a href="faq.html">よくある質問</a>
+          <a href="contact_form.html">お問い合わせ</a>
+        </div>
+        <div class="footer-column">
+          <a href="../index.html#news">ニュース</a>
+          <a href="venue.html">会場案内</a>
+          <a href="ticket.html">チケット情報</a>
+          <a href="guide.html">来場者ガイド</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © morijyobi_c_team</p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </div>
 </body>
 </html>

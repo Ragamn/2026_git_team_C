@@ -1,10 +1,5 @@
 /* performer_detail.css - 出演者詳細ページのスタイル */
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
+/* common.cssで設定されているため、bodyの設定を削除 */
 
 .center {
     text-align: center;
