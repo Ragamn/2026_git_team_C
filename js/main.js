@@ -77,20 +77,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// スクロール時のヘッダー効果
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.header');
-    const scrolled = window.pageYOffset;
-    
-    if (scrolled > 100) {
-        header.style.background = 'rgba(0, 0, 0, 0.95)';
-        header.style.backdropFilter = 'blur(10px)';
-    } else {
-        header.style.background = 'linear-gradient(135deg, #000 0%, #333 100%)';
-        header.style.backdropFilter = 'none';
-    }
-});
-
 // 画像の遅延読み込み
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
