@@ -1,0 +1,146 @@
+/* goods.css - グッズページ固有のスタイル */
+
+/* メインコンテンツ */
+.main {
+    margin-top: 60px;
+    padding-bottom: 2rem;
+    background-color: #fff;
+}
+
+/* グッズセクション */
+.goods-section {
+    padding: 2rem 1rem;
+}
+
+.goods-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.goods-item {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.goods-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.goods-image-wrapper {
+    width: 100%;
+    height: 180px;
+    background-color: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.goods-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.goods-info {
+    padding: 1rem;
+    text-align: left;
+}
+
+.goods-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.goods-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.goods-description {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* タブレット対応 */
+@media (min-width: 768px) {
+    .main {
+        margin-top: 0;
+    }
+
+    .goods-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .goods-image-wrapper {
+        height: 220px;
+    }
+
+    .goods-info {
+        padding: 1.5rem;
+    }
+
+    .goods-name {
+        font-size: 1.1rem;
+    }
+
+    .goods-price {
+        font-size: 1.2rem;
+    }
+
+    .goods-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* PC対応 */
+@media (min-width: 1024px) {
+    .goods-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 小さい画面の調整 */
+@media (max-width: 375px) {
+    .goods-section {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .goods-grid {
+        gap: 1rem;
+    }
+
+    .goods-image-wrapper {
+        height: 150px;
+    }
+
+    .goods-info {
+        padding: 0.75rem;
+    }
+
+    .goods-name {
+        font-size: 0.9rem;
+    }
+
+    .goods-price {
+        font-size: 1rem;
+    }
+
+    .goods-description {
+        font-size: 0.75rem;
+    }
+}
