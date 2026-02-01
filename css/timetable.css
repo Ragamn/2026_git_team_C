@@ -3,7 +3,6 @@ body {
   padding: 0;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   color: #333;
-  width: 375px;
 }
 
 
@@ -27,8 +26,10 @@ p {
 }
 
 
-* 全体コンテナ */ .tab-switch {
-  max-width: 800px;
+/* 全体コンテナ */
+.tab-switch {
+  max-width: 100%;
+  width: 100%;
   margin: 20px auto;
 }
 

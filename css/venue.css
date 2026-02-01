@@ -5,9 +5,11 @@
             justify-content: center;
         }
 
-        /* 357px固定 */
+        /* コンテンツラッパー */
         .app-wrapper {
-            width: 357px;
+            width: 100%;
+            max-width: 768px;
+            margin: 0 auto;
         }
 
         /* 共通カラー */
