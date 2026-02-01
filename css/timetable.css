@@ -1,0 +1,122 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  color: #333;
+  width: 375px;
+}
+
+
+header {
+  background-color: #FFE1F4;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1,header p{
+  font-size: 2rem;
+  color: #474747;
+}
+h1,
+p {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #363636;
+  letter-spacing: 0.05em;
+}
+
+
+* 全体コンテナ */ .tab-switch {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* ラジオボタンは隠す */
+.tab-switch input {
+  display: none;
+}
+
+.tab-switch h1 {
+  text-align: center;
+  margin: 20px 0;
+  /* 上下に少し余白を作ると綺麗です */
+  width: 100%;
+  /* 横幅いっぱいに広げて中央配置を確実にする */
+  font-size: 1.2rem;    /* 「タイムテーブル」という文字のサイズ */
+  text-align: center;
+  margin: 20px 0;
+
+}
+
+/* ボタンを並べるエリア */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  /* 中央寄せ */
+  gap: 5px;
+}
+
+/* タブボタン単体 */
+.tab-buttons label {
+  padding: 0.7em 2em;
+  background: #db91c7;
+  cursor: pointer;
+  flex: 1;
+  /* ボタンを均等幅にする場合 */
+  max-width: 200px;
+  text-align: center;
+}
+
+/* コンテンツ全体 */
+.tab-content {
+  display: none;
+  /* 基本は非表示 */
+  padding: 1.5em 0;
+  text-align: center;
+}
+
+.tab-contents table {
+  text-align: center;
+  margin: 20px 0;
+  /* 上下に少し余白を作ると綺麗です */
+  width: 100%;
+  /* 横幅いっぱいに広げて中央配置を確実にする */
+}
+
+/* --- 切り替えのロジック --- */
+
+/* tab1がチェックされた時、content1を表示 */
+#tab1:checked~.tab-contents #content1 {
+  display: block;
+}
+
+/* tab2がチェックされた時、content2を表示 */
+#tab2:checked~.tab-contents #content2 {
+  display: block;
+}
+
+/* 選択されているボタンの色を変える */
+#tab1:checked~.tab-buttons label[for="tab1"],
+#tab2:checked~.tab-buttons label[for="tab2"] {
+  background: var(--tab-color);
+  color: #ffb0b0;
+  background-color: #a0949d;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* 枠線を一本にする */
+  margin-top: 10px;
+  font-size: 0.85rem; /* スマホ用に少し文字を小さく */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px 4px;
+  word-break: break-all; /* 長い名前の改行を許可 */
+}
+
+th {
+  background-color: #f9f9f9;
+}
