@@ -12,6 +12,8 @@ body {
     line-height: 1.6;
     background: url('../images/キービジュアル画像.webp') center center / cover no-repeat fixed #000;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 /* サイドメニュー（タブレット以上で表示） */
@@ -83,7 +85,7 @@ body {
 
 /* スマートフォン表示用のコンテナ */
 .mobile-container {
-    max-width: 768px;
+    max-width: 100%;
     margin: 0 auto;
     background-color: #fff;
     min-height: 100vh;
@@ -293,7 +295,7 @@ body {
 @media (min-width: 768px) {
     .mobile-container {
         max-width: 768px;
-        background-color: rgba(0, 0, 0, 0.9);
+        margin: 0 auto;
     }
     
     /* ヘッダーを非表示 */
@@ -305,10 +307,25 @@ body {
     .side-nav {
         display: block;
     }
+    
+    /* サイドメニューの幅調整 */
+    .side-nav {
+        width: calc((100vw - 768px) / 2);
+    }
+    
+    /* メインコンテンツのマージン調整 */
+    .main {
+        margin-top: 0;
+    }
 }
 
 /* モバイル表示での調整 */
 @media (max-width: 767px) {
+    .mobile-container {
+        max-width: 100%;
+        box-shadow: none;
+    }
+    
     .header {
         left: 0;
         transform: none;
@@ -322,5 +339,35 @@ body {
         transform: none;
         max-width: none;
         width: 100%;
+    }
+    
+    .main {
+        margin-top: 50px;
+    }
+}
+
+/* タブレットサイズ（768px～1023px）での調整 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .mobile-container {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    
+    .side-nav {
+        width: calc((100vw - 768px) / 2);
+        min-width: 100px;
+    }
+}
+
+/* デスクトップサイズ（1024px以上）での調整 */
+@media (min-width: 1024px) {
+    .mobile-container {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    
+    .side-nav {
+        width: calc((100vw - 768px) / 2);
+        min-width: 150px;
     }
 }
