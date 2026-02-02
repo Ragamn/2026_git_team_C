@@ -289,6 +289,39 @@ body {
     .copyright p {
         font-size: 0.7rem;
     }
+    
+    /* ヘッダーの調整 */
+    .header-container {
+        padding: 0 0.5rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+    
+    .logo .date {
+        font-size: 0.6rem;
+    }
+    
+    .hamburger {
+        padding: 0.25rem;
+    }
+    
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+    }
+}
+
+/* 小さいモバイル画面（320px - 374px）での追加調整 */
+@media (max-width: 320px) {
+    .logo h1 {
+        font-size: 1rem;
+    }
+    
+    .logo .date {
+        font-size: 0.55rem;
+    }
 }
 
 /* タブレット以上のサイズ（768px以上でサイドメニュー表示） */

@@ -1,0 +1,187 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  color: #333;
+  width: 100%;
+  max-width: 768px;
+  line-height: 1.6;
+}
+
+
+header {
+  background-color: #FFE1F4; /* タイムテーブルと同じ背景色 */
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #474747;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #474747;
+  font-weight: bold;
+}
+
+
+body > h1 {
+  font-size: 1.1rem;
+  color: #363636;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  line-height: 1.4;
+}
+
+
+section {
+  padding: 10px 20px 30px;
+}
+
+section h1 {
+  font-size: 1.3rem;
+  color: #db91c7; /* タブボタンと同じアクセントカラー */
+  border-bottom: 2px solid #db91c7;
+  margin: 20px 0 15px;
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  color: #a0949d; /* 選択中タブと同じ色 */
+  margin: 20px 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+h2::before {
+  content: "■";
+  margin-right: 8px;
+  font-size: 0.8rem;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #474747;
+  background: #f9f9f9;
+  padding: 5px 10px;
+  border-left: 4px solid #db91c7;
+  margin-top: 15px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  list-style-type: disc;
+}
+
+p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+
+hr {
+  border: 0;
+  border-top: 1px dashed #ddd;
+  margin: 20px 0;
+}
+
+
+strong {
+  color: #db91c7;
+}
+
+
+section:last-of-type {
+  background-color: #fcfcfc;
+  text-align: center;
+}
+
+section:last-of-type h3:last-of-type {
+  border-left: none;
+  background: none;
+  font-size: 1.2rem;
+  color: #db91c7;
+  margin-top: 30px;
+}
+
+/* メインコンテンツのスタイル */
+.main {
+  padding: 20px 15px;
+  margin-top: 60px;
+}
+
+/* モバイル表示での調整 */
+@media (max-width: 767px) {
+  .main {
+    margin-top: 60px;
+  }
+  
+  body > h1 {
+    font-size: 1rem;
+    padding: 15px;
+  }
+  
+  section {
+    padding: 10px 15px 25px;
+  }
+  
+  section h1 {
+    font-size: 1.2rem;
+  }
+  
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+/* タブレット以上のサイズ */
+@media (min-width: 768px) {
+  .main {
+    margin-top: 0;
+    padding: 40px 30px;
+  }
+  
+  body > h1 {
+    font-size: 1.3rem;
+    padding: 30px;
+  }
+  
+  section {
+    padding: 15px 30px 40px;
+  }
+  
+  section h1 {
+    font-size: 1.5rem;
+    margin: 30px 0 20px;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    margin: 25px 0 15px;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+    padding: 8px 15px;
+  }
+  
+  ul {
+    padding-left: 30px;
+  }
+  
+  li, p {
+    font-size: 1rem;
+  }
+}
