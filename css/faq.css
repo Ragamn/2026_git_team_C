@@ -1,21 +1,5 @@
 /* --- リセットCSS & 基本設定 --- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    background-color: #fff;
-    color: #333;
-    line-height: 1.6;
-    /* モバイルレイアウトをPCの中央に表示するための設定 */
-    max-width: 375px;
-    margin: 0 auto;
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
-}
+/* common.cssで設定されているため、bodyの設定を削除 */
 
 /* --- Q&A エリア --- */
 .qa-container {

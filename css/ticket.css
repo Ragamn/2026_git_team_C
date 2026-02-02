@@ -1,0 +1,66 @@
+/* ticket.css - チケット情報ページのスタイル */
+
+.content {
+    flex-direction: column;
+}
+
+.yoko {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.st-container {
+    max-width: 600px;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.st-header-row {
+    display: flex;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #E55EC1;
+}
+
+.st-header-text {
+    display: inline-block;
+    border-bottom: 2px solid #ccc;
+    padding: 0 20px 5px;
+}
+
+.st-ticket-cell {
+    flex: 1;
+    background-color: #FFE1F4;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.st-buy-section {
+    max-width: 600px;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    text-align: center;
+    margin: 40px auto;
+    color: #000;
+}
+
+.st-btn-buy {
+    display: inline-block;
+    background-color: #E55EC1;
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 15px 80px;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: opacity 0.2s;
+}
+
+.st-btn-buy:hover {
+    opacity: 0.8;
+    color: white;
+}
