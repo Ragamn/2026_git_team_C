@@ -102,25 +102,28 @@
             <div class="content-box my-3 p-3">
 
                 <div class="info-row">
+                    <span class="label">お問い合わせ種別：</span>
+                    <span class="value" id="displayCategory"></span>
+                </div>
+
+                <div class="info-row">
                     <span class="label">お名前：</span>
-                    <span class="value">山田 太郎</span>
+                    <span class="value" id="displayName"></span>
                 </div>
 
                 <div class="info-row">
                     <span class="label">メールアドレス：</span>
-                    <span class="value">y@example.com</span>
+                    <span class="value" id="displayEmail"></span>
                 </div>
 
                 <div class="info-row">
                     <span class="label">電話番号：</span>
-                    <span class="value">090-1234-5678</span>
+                    <span class="value" id="displayPhone"></span>
                 </div>
 
                 <div class="info-row">
                     <span class="label">お問い合わせ内容：</span>
-                    <span class="value">
-                        イベントについて詳しく知りたいです。ああああああああああああああああ
-                    </span>
+                    <span class="value" id="displayMessage"></span>
                 </div>
 
             </div>
@@ -130,8 +133,8 @@
 
             <!-- ボタン -->
             <div class="d-flex justify-content-between">
-                <button class="btn btn-outline-secondary px-4">戻る</button>
-                <button class="btn btn-submit px-4">送信</button>
+                <button class="btn btn-outline-secondary px-4" id="backBtn">戻る</button>
+                <button class="btn btn-submit px-4" id="submitBtn">送信</button>
             </div>
 
         </div>
@@ -162,6 +165,41 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script>
+      // セッションストレージからデータを取得して表示
+      const formData = JSON.parse(sessionStorage.getItem('contactFormData'));
+      
+      if (formData) {
+        const categoryMap = {
+          'ticket': 'チケットについて',
+          'stage': '会場について',
+          'artist': '出演者について',
+          'etc': 'その他'
+        };
+        
+        document.getElementById('displayCategory').textContent = categoryMap[formData.category] || '未選択';
+        document.getElementById('displayName').textContent = formData.name;
+        document.getElementById('displayEmail').textContent = formData.email;
+        document.getElementById('displayPhone').textContent = formData.phone || '未入力';
+        document.getElementById('displayMessage').textContent = formData.message;
+      } else {
+        // データがない場合はフォームページに戻る
+        window.location.href = 'contact_form.html';
+      }
+      
+      // 戻るボタン
+      document.getElementById('backBtn').addEventListener('click', function() {
+        window.location.href = 'contact_form.html';
+      });
+      
+      // 送信ボタン
+      document.getElementById('submitBtn').addEventListener('click', function() {
+        // セッションストレージをクリア
+        sessionStorage.removeItem('contactFormData');
+        // 完了ページへ遷移
+        window.location.href = 'contact_complete.html';
+      });
+    </script>
   </div>
 </body>
 
