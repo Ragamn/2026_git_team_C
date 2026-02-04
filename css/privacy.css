@@ -9,48 +9,18 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ヘッダー */
-header {
-    background-color: #fce4ec;
-    /* 薄いピンク */
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #f8bbd0;
-}
-
-.header-logo {
-    color: #880e4f;
-}
-
-.header-logo .title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    display: block;
-}
-
-.header-logo .date-venue {
-    font-size: 0.75rem;
-    font-weight: bold;
-}
-
-.menu-icon {
-    font-size: 1.4rem;
-    color: #333;
-    cursor: pointer;
-}
-
-/* メインコンテンツ（グレー背景部分） */
+/* メインコンテンツ */
 main {
-    background-color: #bdbdbd;
-    /* 画像の背景色 */
+    background-color: #fff;
     padding: 20px;
+    margin-top: 60px;
+    min-height: calc(100vh - 60px - 250px);
 }
 
 .policy-content {
     font-size: 0.85rem;
     text-align: justify;
+    padding-top: 1rem;
 }
 
 h1 {
@@ -82,33 +52,15 @@ p {
     color: #555;
 }
 
-/* フッター */
-footer {
-    background-color: #fce4ec;
-    padding: 20px 10px;
+/* PC表示用メディアクエリ */
+@media (min-width: 768px) {
+    main {
+        margin-top: 0;
+    }
+    
+    .policy-content {
+        padding-top: 0;
+    }
 }
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid #f8bbd0;
-    border-left: 1px solid #f8bbd0;
-    margin-bottom: 20px;
-}
-
-.footer-grid div {
-    padding: 10px 5px;
-    text-align: center;
-    font-size: 0.75rem;
-    border-right: 1px solid #f8bbd0;
-    border-bottom: 1px solid #f8bbd0;
-    color: #880e4f;
-    font-weight: bold;
-}
-
-.copyright {
-    text-align: center;
-    font-size: 0.7rem;
-    color: #444;
-    margin-top: 10px;
-}
+/* フッターはcommon.cssで管理 */

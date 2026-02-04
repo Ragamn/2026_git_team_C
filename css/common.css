@@ -230,6 +230,8 @@ body {
     background: #FFE1F4;
     color: #000000;
     padding: 2rem 0 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .footer-grid {
@@ -375,7 +377,8 @@ body {
     }
     
     .main {
-        margin-top: 50px;
+        margin-top: 60px;
+        min-height: calc(100vh - 60px - 200px);
     }
 }
 

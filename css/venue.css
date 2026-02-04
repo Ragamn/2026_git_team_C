@@ -1,15 +1,12 @@
 
-        body {
-            font-family: "Noto Sans JP", sans-serif;
-            display: flex;
-            justify-content: center;
-        }
-
         /* コンテンツラッパー */
         .app-wrapper {
             width: 100%;
             max-width: 768px;
             margin: 0 auto;
+            padding-bottom: 2rem;
+            min-height: calc(100vh - 60px - 250px);
+            padding-top: 1.5rem;
         }
 
         /* 共通カラー */
@@ -77,4 +74,11 @@
             width: 100%;
             border-radius: 8px;
         }
+
+/* PC表示用メディアクエリ */
+@media (min-width: 768px) {
+    .app-wrapper {
+        padding-top: 0;
+    }
+}
   

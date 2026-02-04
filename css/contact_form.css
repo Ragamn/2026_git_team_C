@@ -11,6 +11,7 @@
 .form-container {
     max-width: 400px;
     margin: 0 auto;
+    padding-top: 1.5rem;
 }
 
 .form-group {
@@ -75,4 +76,11 @@ textarea.input-gray {
 
 .submit-btn:hover {
     background-color: #bbb;
+}
+
+/* PC表示用メディアクエリ */
+@media (min-width: 768px) {
+    .form-container {
+        padding-top: 0;
+    }
 }

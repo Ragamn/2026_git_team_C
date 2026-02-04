@@ -1,12 +1,10 @@
-        body {
-            display: flex;
-            justify-content: center;
-            background-color: #ffffff;
-        }
-
-        /* 357px固定 */
+        /* コンテンツラッパー */
         .app-wrapper {
-            width: 357px;
+            width: 100%;
+            max-width: 357px;
+            margin: 0 auto;
+            min-height: calc(100vh - 60px - 250px);
+            padding-top: 1rem;
         }
 
         .step span {
@@ -66,3 +64,10 @@
             /* ← ここ重要 */
             text-align: left;
         }
+
+/* PC表示用メディアクエリ */
+@media (min-width: 768px) {
+    .app-wrapper {
+        padding-top: 0;
+    }
+}

@@ -36,7 +36,7 @@ main {
     font-size: 18px;
     font-weight: bold;
     width: 80%;
-    margin: 0 auto 30px auto;
+    margin: 1.5rem auto 30px auto;
 }
 
 /* 日付見出し（オレンジ） */
@@ -116,4 +116,15 @@ footer {
 .copyright {
     font-size: 10px;
     color: #555;
+}
+
+/* PC表示用メディアクエリ */
+@media (min-width: 768px) {
+    main {
+        margin-top: 0;
+    }
+    
+    .page-title {
+        margin-top: 30px;
+    }
 }
