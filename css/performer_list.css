@@ -65,6 +65,13 @@ main {
 .artist-card {
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+
+.artist-card:hover {
+    cursor: pointer;
+    opacity: 0.85;
 }
 
 /* 画像エリア */

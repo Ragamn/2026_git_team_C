@@ -75,10 +75,37 @@
             border-radius: 8px;
         }
 
-/* PC表示用メディアクエリ */
+/* タブレット・PC表示用メディアクエリ */
 @media (min-width: 768px) {
     .app-wrapper {
         padding-top: 0;
+    }
+
+    .access-box {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .access-section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .access-title {
+        font-size: 20px;
+    }
+
+    .access-text {
+        font-size: 16px;
+    }
+
+    .map-box {
+        width: 300px;
+    }
+
+    .venue-map-title {
+        font-size: 24px;
+        margin-bottom: 20px;
     }
 }
   
