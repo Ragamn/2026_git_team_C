@@ -49,6 +49,16 @@
     transform: translateX(-50%);
 }
 
+.section-title a {
+    color: #E55EC1;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.section-title a:hover {
+    opacity: 0.7;
+}
+
 .section-title::after {
     content: '';
     position: absolute;
