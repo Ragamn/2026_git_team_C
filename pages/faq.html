@@ -1,124 +1,236 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q&A Page</title>
-    <link rel="stylesheet" href="../css/faq.css">
-</head>
-<body>
 
-    <div class="qa-container">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>よくある質問 - Spring Music Festival '26</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/faq.css">
+</head>
+
+<body>
+  <!-- 左サイドメニュー（タブレット以上で表示） -->
+  <nav class="side-nav side-nav-left">
+    <div class="side-nav-content">
+      <div class="side-nav-item">
+        <a href="../index.html">TOP</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="performer_list.html">ARTISTS</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="timetable.html">TIMETABLE</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="ticket.html">TICKET</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 右サイドメニュー（タブレット以上で表示） -->
+  <nav class="side-nav side-nav-right">
+    <div class="side-nav-content">
+      <div class="side-nav-item">
+        <a href="goods.html">GOODS</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="venue.html">ACCESS</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="guide.html">GUIDELINE</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="contact_form.html">CONTACT</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="privacy.html">PRIVACY POLICY</a>
+      </div>
+      <div class="side-nav-item official-store">
+        <a href="goods.html">OFFICIAL STORE></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-container">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <h1>Spring Music Festival '26</h1>
+          <p class="date">MAY 2 SAT 3 SUN グリーンパーク野外ステージ</p>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="../index.html">ホーム</a></li>
+            <li><a href="timetable.html">タイムテーブル</a></li>
+            <li><a href="ticket.html">チケット情報</a></li>
+            <li><a href="performer_list.html">出演者一覧</a></li>
+            <li><a href="venue.html">会場案内</a></li>
+            <li><a href="goods.html">グッズ紹介</a></li>
+            <li><a href="guide.html">来場者ガイド</a></li>
+            <li><a href="faq.html">よくある質問</a></li>
+            <li><a href="contact_form.html">お問い合わせ</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+      <div class="qa-container">
         <div class="qa-title-bar">Q&A</div>
 
         <h2 class="main-heading">[よくある質問]</h2>
 
         <div class="qa-list">
-            
-            <h3 class="category-title"><span>チケットについて</span></h3>
 
-            <div class="qa-item">
-                <p class="question">Q1. チケットは当日券もありますか？</p>
-                <p class="answer">
-                    A. はい、前売り券が完売していない場合のみ、当日券を販売いたします。<br>
-                    ただし、数に限りがありますので、事前に前売り券をご購入いただくことを強くおすすめします。<br>
-                    当日券の販売状況は、公式サイトおよびSNSで当日朝9時にお知らせします。
-                </p>
-            </div>
+          <h3 class="category-title"><span>チケットについて</span></h3>
 
-            <div class="qa-item">
-                <p class="question">Q2. チケットの転売は可能ですか？</p>
-                <p class="answer">
-                    A. 公式チケット販売サイト以外での転売は固く禁じられています。<br>
-                    転売チケットでのご入場はお断りし、チケット代金の払い戻しもいたしかねます。<br>
-                    やむを得ず参加できなくなった場合は、公式リセールサービスをご利用ください。
-                </p>
-            </div>
+          <div class="qa-item">
+            <p class="question">Q1. チケットは当日券もありますか？</p>
+            <p class="answer">
+              A. はい、前売り券が完売していない場合のみ、当日券を販売いたします。<br>
+              ただし、数に限りがありますので、事前に前売り券をご購入いただくことを強くおすすめします。<br>
+              当日券の販売状況は、公式サイトおよびSNSで当日朝9時にお知らせします。
+            </p>
+          </div>
 
-            <div class="qa-item">
-                <p class="question">Q3. 小学生以下は本当に無料ですか？</p>
-                <p class="answer">
-                    A. はい、小学生以下のお子様は保護者同伴の場合に限り無料でご入場いただけます。<br>
-                    ただし、保護者の方は有料チケットが必要です。<br>
-                    また、お子様だけでのご入場はできませんので、必ず保護者の方とご一緒にお越しください。
-                </p>
-            </div>
+          <div class="qa-item">
+            <p class="question">Q2. チケットの転売は可能ですか？</p>
+            <p class="answer">
+              A. 公式チケット販売サイト以外での転売は固く禁じられています。<br>
+              転売チケットでのご入場はお断りし、チケット代金の払い戻しもいたしかねます。<br>
+              やむを得ず参加できなくなった場合は、公式リセールサービスをご利用ください。
+            </p>
+          </div>
 
-
-            <h3 class="category-title"><span>入場・会場について</span></h3>
-
-            <div class="qa-item">
-                <p class="question">Q4. 再入場は可能ですか？</p>
-                <p class="answer">
-                    A. はい、再入場可能です。<br>
-                    退場時に手の甲に再入場スタンプを押印いたします。<br>
-                    再入場の際は、スタンプとチケット(または購入確認メール)をスタッフにご提示ください。<br>
-                    スタンプが消えてしまった場合は再入場できませんのでご注意ください。
-                </p>
-            </div>
-
-            <div class="qa-item">
-                <p class="question">Q5. 開場時間は何時ですか？</p>
-                <p class="answer">
-                    A. 両日とも10:30開場予定です。<br>
-                    開演(最初のアーティストのステージ開始)は11:00からとなります。<br>
-                    混雑が予想されますので、時間に余裕を持ってお越しください。
-                </p>
-            </div>
-
-            <div class="qa-item">
-                <p class="question">Q6. 会場内に荷物を預ける場所はありますか？</p>
-                <p class="answer">
-                    A. はい、有料のクロークサービスをご用意しております(1個500円)。<br>
-                    ただし、貴重品はお預かりできませんので、各自で管理をお願いいたします。<br>
-                    大きなお荷物はできるだけ持ち込まず、事前にコインロッカー等をご利用いただくことをおすすめします。
-                </p>
-            </div>
+          <div class="qa-item">
+            <p class="question">Q3. 小学生以下は本当に無料ですか？</p>
+            <p class="answer">
+              A. はい、小学生以下のお子様は保護者同伴の場合に限り無料でご入場いただけます。<br>
+              ただし、保護者の方は有料チケットが必要です。<br>
+              また、お子様だけでのご入場はできませんので、必ず保護者の方とご一緒にお越しください。
+            </p>
+          </div>
 
 
-            <h3 class="category-title"><span>飲食について</span></h3>
+          <h3 class="category-title"><span>入場・会場について</span></h3>
 
-            <div class="qa-item">
-                <p class="question">Q7. 食べ物や飲み物の持ち込みはできますか？</p>
-                <p class="answer">
-                    A. ペットボトルや水筒などの飲み物の持ち込みは可能です。<br>
-                    ただし、ビン・カン類の持ち込みは破損の危険があるため禁止です。<br>
-                    食べ物の持ち込みも可能ですが、会場内にはフードコート(10店舗)がございますので、ぜひご利用ください。
-                </p>
-            </div>
+          <div class="qa-item">
+            <p class="question">Q4. 再入場は可能ですか？</p>
+            <p class="answer">
+              A. はい、再入場可能です。<br>
+              退場時に手の甲に再入場スタンプを押印いたします。<br>
+              再入場の際は、スタンプとチケット(または購入確認メール)をスタッフにご提示ください。<br>
+              スタンプが消えてしまった場合は再入場できませんのでご注意ください。
+            </p>
+          </div>
 
-            <div class="qa-item">
-                <p class="question">Q8. 会場内で食事はできますか？</p>
-                <p class="answer">
-                    A. はい、フードコートエリアに10店舗の飲食ブースを設置しております。<br>
-                    ハンバーガー、タコス、カレー、クレープなど多様なメニューをご用意しています。<br>
-                    価格帯は500円～1,200円程度です。キャッシュレス決済も可能です。
-                </p>
-            </div>
+          <div class="qa-item">
+            <p class="question">Q5. 開場時間は何時ですか？</p>
+            <p class="answer">
+              A. 両日とも10:30開場予定です。<br>
+              開演(最初のアーティストのステージ開始)は11:00からとなります。<br>
+              混雑が予想されますので、時間に余裕を持ってお越しください。
+            </p>
+          </div>
+
+          <div class="qa-item">
+            <p class="question">Q6. 会場内に荷物を預ける場所はありますか？</p>
+            <p class="answer">
+              A. はい、有料のクロークサービスをご用意しております(1個500円)。<br>
+              ただし、貴重品はお預かりできませんので、各自で管理をお願いいたします。<br>
+              大きなお荷物はできるだけ持ち込まず、事前にコインロッカー等をご利用いただくことをおすすめします。
+            </p>
+          </div>
 
 
-            <h3 class="category-title"><span>その他</span></h3>
+          <h3 class="category-title"><span>飲食について</span></h3>
 
-            <div class="qa-item">
-                <p class="question">Q9. 雨が降った場合はどうなりますか？</p>
-                <p class="answer">
-                    A. 小雨の場合は決行いたします。<br>
-                    ステージには屋根がございますが、観客エリアは屋外のため、レインコートや雨具をご持参ください。<br>
-                    荒天(台風、雷雨など)の場合は中止となる可能性があります。開催可否は前日18時に公式サイトおよびSNSで発表いたします。
-                </p>
-            </div>
+          <div class="qa-item">
+            <p class="question">Q7. 食べ物や飲み物の持ち込みはできますか？</p>
+            <p class="answer">
+              A. ペットボトルや水筒などの飲み物の持ち込みは可能です。<br>
+              ただし、ビン・カン類の持ち込みは破損の危険があるため禁止です。<br>
+              食べ物の持ち込みも可能ですが、会場内にはフードコート(10店舗)がございますので、ぜひご利用ください。
+            </p>
+          </div>
 
-            <div class="qa-item">
-                <p class="question">Q10. 駐車場の予約方法は？</p>
-                <p class="answer">
-                    A. 会場には100台分の有料駐車場がございますが、事前予約制となっております。<br>
-                    ご予約は公式サイトの専用フォームから、4月15日(水)10:00より先着順で受け付けます。<br>
-                    満車の場合は近隣のコインパーキングをご利用ください。なるべく公共交通機関でのご来場をお願いいたします。
-                </p>
-            </div>
+          <div class="qa-item">
+            <p class="question">Q8. 会場内で食事はできますか？</p>
+            <p class="answer">
+              A. はい、フードコートエリアに10店舗の飲食ブースを設置しております。<br>
+              ハンバーガー、タコス、カレー、クレープなど多様なメニューをご用意しています。<br>
+              価格帯は500円～1,200円程度です。キャッシュレス決済も可能です。
+            </p>
+          </div>
+
+
+          <h3 class="category-title"><span>その他</span></h3>
+
+          <div class="qa-item">
+            <p class="question">Q9. 雨が降った場合はどうなりますか？</p>
+            <p class="answer">
+              A. 小雨の場合は決行いたします。<br>
+              ステージには屋根がございますが、観客エリアは屋外のため、レインコートや雨具をご持参ください。<br>
+              荒天(台風、雷雨など)の場合は中止となる可能性があります。開催可否は前日18時に公式サイトおよびSNSで発表いたします。
+            </p>
+          </div>
+
+          <div class="qa-item">
+            <p class="question">Q10. 駐車場の予約方法は？</p>
+            <p class="answer">
+              A. 会場には100台分の有料駐車場がございますが、事前予約制となっております。<br>
+              ご予約は公式サイトの専用フォームから、4月15日(水)10:00より先着順で受け付けます。<br>
+              満車の場合は近隣のコインパーキングをご利用ください。なるべく公共交通機関でのご来場をお願いいたします。
+            </p>
+          </div>
 
         </div>
-    </div>
+      </div>
+    </main>
 
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <a href="../index.html">トップ</a>
+          <a href="performer_list.html">出演者一覧</a>
+          <a href="timetable.html">タイムテーブル</a>
+          <a href="goods.html">グッズ紹介</a>
+          <a href="faq.html">よくある質問</a>
+          <a href="contact_form.html">お問い合わせ</a>
+        </div>
+        <div class="footer-column">
+          <a href="venue.html">会場案内</a>
+          <a href="ticket.html">チケット情報</a>
+          <a href="guide.html">来場者ガイド</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © morijyobi_c_team</p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </div>
 </body>
+
 </html>

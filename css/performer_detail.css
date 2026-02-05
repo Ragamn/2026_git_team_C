@@ -1,0 +1,107 @@
+/* performer_detail.css - 出演者詳細ページのスタイル */
+/* common.cssで設定されているため、bodyの設定を削除 */
+
+.center {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.maincolor {
+    color: #FFE1F4;
+    text-shadow: 1px 1px 2px #ccc;
+}
+
+.image {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 0;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.top-underline {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 10px 0; 
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto 30px auto;
+}
+
+.link-container {
+    position: relative; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.link-title {
+    position: absolute;
+    left: 0;
+}
+
+.link-title h3 {
+    margin: 0;
+}
+
+.icon-area {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-area img {
+     vertical-align: bottom;
+     transition: opacity 0.3s;
+}
+
+.icon-area a:hover img {
+    opacity: 0.7; 
+}
+
+/* モバイル・タブレット対応 */
+@media screen and (max-width: 767px) {
+    .content {
+        flex-direction: column;
+    }
+
+    p {
+        width: 100%;
+    }
+    
+    .image {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .link-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .link-title {
+        position: static; 
+        width: 100%;
+        text-align: center; 
+    }
+
+    .flex {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+}
+
+/* PC表示用メディアクエリ */
+@media (min-width: 768px) {
+    .center {
+        padding-top: 0;
+    }
+}

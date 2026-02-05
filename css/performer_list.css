@@ -1,21 +1,5 @@
 /* --- リセットCSS & 基本設定 --- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.5;
-    /* モバイルレイアウトをPCの中央に表示するための設定 */
-    max-width: 480px;
-    margin: 0 auto;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-}
+/* common.cssで設定されているため、bodyの設定を削除 */
 
 /* ハンバーガーメニューアイコン */
 .menu-icon {
@@ -52,7 +36,7 @@ main {
     font-size: 18px;
     font-weight: bold;
     width: 80%;
-    margin: 0 auto 30px auto;
+    margin: 1.5rem auto 30px auto;
 }
 
 /* 日付見出し（オレンジ） */
@@ -81,6 +65,13 @@ main {
 .artist-card {
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+
+.artist-card:hover {
+    cursor: pointer;
+    opacity: 0.85;
 }
 
 /* 画像エリア */
@@ -132,4 +123,15 @@ footer {
 .copyright {
     font-size: 10px;
     color: #555;
+}
+
+/* PC表示用メディアクエリ */
+@media (min-width: 768px) {
+    main {
+        margin-top: 0;
+    }
+    
+    .page-title {
+        margin-top: 30px;
+    }
 }

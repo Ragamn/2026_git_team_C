@@ -1,231 +1,210 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spring Music Festival ‘26</title>
-    <link rel="stylesheet" href="../css/performer_list.css">
-    <style>
-        /* --- リセットCSS & 基本設定 --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.5;
-            /* モバイルレイアウトをPCの中央に表示するための設定 */
-            max-width: 480px;
-            margin: 0 auto;
-            border-left: 1px solid #ddd;
-            border-right: 1px solid #ddd;
-        }
-
-        /* ハンバーガーメニューアイコン */
-        .menu-icon {
-            width: 24px;
-            height: 18px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            cursor: pointer;
-        }
-
-        .menu-icon span {
-            display: block;
-            width: 100%;
-            height: 3px;
-            background-color: #333;
-            border-radius: 2px;
-        }
-
-        /* --- メインコンテンツ --- */
-        main {
-            background-color: #fff;
-            padding: 20px 15px;
-            min-height: 80vh;
-        }
-
-        /* 出演者一覧タイトル（グレーのボタン風） */
-        .page-title {
-            background-color: #999;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            border-radius: 25px;
-            font-size: 18px;
-            font-weight: bold;
-            width: 80%;
-            margin: 0 auto 30px auto;
-        }
-
-        /* 日付見出し（オレンジ） */
-        .date-heading {
-            background-color: #ffcc80; /* オレンジ */
-            padding: 5px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 15px;
-            min-width: 120px;
-            text-align: center;
-        }
-
-        /* --- アーティストグリッド --- */
-        .artist-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* 2列 */
-            gap: 20px 15px; /* 縦 横 の間隔 */
-            margin-bottom: 40px;
-        }
-
-        .artist-card {
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* 画像エリア */
-        .artist-image {
-            width: 100%;
-            aspect-ratio: 16 / 9; /* 横長比率を維持 */
-            object-fit: cover;
-            background-color: #eee; /* 画像がない時の背景色 */
-            margin-bottom: 8px;
-            border: 1px solid #eee;
-        }
-
-        .artist-name {
-            font-size: 12px;
-            font-weight: bold;
-            line-height: 1.3;
-        }
-
-        .artist-desc {
-            font-size: 10px;
-            color: #555;
-            line-height: 1.2;
-        }
-
-        /* --- フッター --- */
-        footer {
-            background-color: #ffebf5; /* 薄いピンク */
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .footer-links {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .footer-links a {
-            text-decoration: none;
-            color: #333;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .copyright {
-            font-size: 10px;
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet">
+  <title>出演者一覧 - Spring Music Festival '26</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/performer_list.css">
 </head>
+
 <body>
+  <!-- 左サイドメニュー（タブレット以上で表示） -->
+  <nav class="side-nav side-nav-left">
+    <div class="side-nav-content">
+      <div class="side-nav-item">
+        <a href="../index.html">TOP</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="performer_list.html">ARTISTS</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="timetable.html">TIMETABLE</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="ticket.html">TICKET</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </nav>
 
-    <main>
-        <div class="page-title">出演者一覧</div>
+  <!-- 右サイドメニュー（タブレット以上で表示） -->
+  <nav class="side-nav side-nav-right">
+    <div class="side-nav-content">
+      <div class="side-nav-item">
+        <a href="goods.html">GOODS</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="venue.html">ACCESS</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="guide.html">GUIDELINE</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="contact_form.html">CONTACT</a>
+      </div>
+      <div class="side-nav-item">
+        <a href="privacy.html">PRIVACY POLICY</a>
+      </div>
+      <div class="side-nav-item official-store">
+        <a href="goods.html">OFFICIAL STORE></a>
+      </div>
+    </div>
+  </nav>
 
-        <section>
-            <div class="date-heading">8/2(土)</div>
-            
-            <div class="artist-grid">
-                <div class="artist-card">
-                    <img src="https://placehold.co/300x180/EEE/31343C" alt="The Blossom Drive" class="artist-image">
-                    <div class="artist-name">The Blossom Drive</div>
-                    <div class="artist-desc">(オルタナティブロックバンド)</div>
-                </div>
+  <div class="mobile-container">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <h1>Spring Music Festival '26</h1>
+          <p class="date">MAY 2 SAT 3 SUN グリーンパーク野外ステージ</p>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="../index.html">ホーム</a></li>
+            <li><a href="timetable.html">タイムテーブル</a></li>
+            <li><a href="ticket.html">チケット情報</a></li>
+            <li><a href="performer_list.html">出演者一覧</a></li>
+            <li><a href="venue.html">会場案内</a></li>
+            <li><a href="goods.html">グッズ紹介</a></li>
+            <li><a href="guide.html">来場者ガイド</a></li>
+            <li><a href="faq.html">よくある質問</a></li>
+            <li><a href="contact_form.html">お問い合わせ</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
 
-                <div class="artist-card">
-                    <img src="https://placehold.co/300x180/EEE/31343C" alt="高橋リオ" class="artist-image">
-                    <div class="artist-name">高橋リオ</div>
-                    <div class="artist-desc">(シンガーソングライター/Luna Harmony)</div>
-                </div>
+    <!-- メインコンテンツ -->
+    <main class="main">
+      <div class="page-title">出演者一覧</div>
 
-                <div class="artist-card">
-                    <img src="https://placehold.co/300x180/EEE/31343C" alt="DJ Breeze" class="artist-image">
-                    <div class="artist-name">DJ Breeze</div>
-                    <div class="artist-desc">(DJ/プロデューサー)</div>
-                </div>
+      <section>
+        <div class="date-heading">8/2(土)</div>
 
-                <div class="artist-card">
-                    <img src="https://placehold.co/300x180/EEE/31343C" alt="Morning Echoes" class="artist-image">
-                    <div class="artist-name">Morning Echoes</div>
-                    <div class="artist-desc">(フォークデュオ)</div>
-                </div>
+        <div class="artist-grid">
+          <a href="performer_detail_1.html" class="artist-card">
+            <img src="../images/TheBlossomDrive.webp" alt="The Blossom Drive" class="artist-image">
+            <div class="artist-name">The Blossom Drive</div>
+            <div class="artist-desc">(オルタナティブロックバンド)</div>
+          </a>
 
-                <div class="artist-card">
-                    <img src="https://placehold.co/300x180/EEE/31343C" alt="中村蓮" class="artist-image">
-                    <div class="artist-name">中村蓮</div>
-                    <div class="artist-desc">(ラッパー/トラックメイカー)</div>
-                </div>
+          <a href="performer_detail_2.html" class="artist-card">
+            <img src="../images/高橋リオ.webp" alt="高橋リオ" class="artist-image">
+            <div class="artist-name">高橋リオ</div>
+            <div class="artist-desc">(シンガーソングライター/Luna Harmony)</div>
+          </a>
 
-                <div class="artist-card">
-                    <img src="https://placehold.co/300x180/EEE/31343C" alt="Velvet Groove" class="artist-image">
-                    <div class="artist-name">Velvet Groove</div>
-                    <div class="artist-desc">(ジャズバンド)</div>
-                </div>
-            </div>
-        </section>
+          <a href="performer_detail_3.html" class="artist-card">
+            <img src="../images/DJ_Breeze.webp" alt="DJ Breeze" class="artist-image">
+            <div class="artist-name">DJ Breeze</div>
+            <div class="artist-desc">(DJ/プロデューサー)</div>
+          </a>
 
-        <section>
-            <div class="date-heading">8/3(日)</div>
-            
-            <div class="artist-grid">
-                <div class="artist-card">
-                    <img src="https://placehold.co/300x180/EEE/31343C" alt="Crimson Waves" class="artist-image">
-                    <div class="artist-name">Crimson Waves</div>
-                    <div class="artist-desc">(ハードロック/メタルバンド)</div>
-                </div>
+          <a href="performer_detail_4.html" class="artist-card">
+            <img src="../images/MorningEchoes.webp" alt="Morning Echoes" class="artist-image">
+            <div class="artist-name">Morning Echoes</div>
+            <div class="artist-desc">(フォークデュオ)</div>
+          </a>
 
-                <div class="artist-card">
-                    <img src="https://placehold.co/300x180/EEE/31343C" alt="夏希サクラ" class="artist-image">
-                    <div class="artist-name">夏希サクラ</div>
-                    <div class="artist-desc">(シンガー/パフォーマー)</div>
-                </div>
+          <a href="performer_detail_5.html" class="artist-card">
+            <img src="../images/中村蓮.webp" alt="中村蓮" class="artist-image">
+            <div class="artist-name">中村蓮</div>
+            <div class="artist-desc">(ラッパー/トラックメイカー)</div>
+          </a>
 
-                <div class="artist-card">
-                    <img src="https://placehold.co/300x180/EEE/31343C" alt="森下晴人" class="artist-image">
-                    <div class="artist-name">森下晴人</div>
-                    <div class="artist-desc">(エレクトロニカアーティスト)</div>
-                </div>
+          <a href="performer_detail_6.html" class="artist-card">
+            <img src="../images/VelvetGroove.webp" alt="Velvet Groove" class="artist-image">
+            <div class="artist-name">Velvet Groove</div>
+            <div class="artist-desc">(ジャズバンド)</div>
+          </a>
+        </div>
+      </section>
 
-                <div class="artist-card">
-                    <img src="https://placehold.co/300x180/EEE/31343C" alt="風雅" class="artist-image">
-                    <div class="artist-name">風雅(ふうが)</div>
-                    <div class="artist-desc">(和楽器バンド)</div>
-                </div>
+      <section>
+        <div class="date-heading">8/3(日)</div>
 
-                <div class="artist-card">
-                    <img src="https://placehold.co/300x180/EEE/31343C" alt="Neon Lights" class="artist-image">
-                    <div class="artist-name">Neon Lights</div>
-                    <div class="artist-desc">(ソウル/ファンクバンド)</div>
-                </div>
+        <div class="artist-grid">
+          <a href="performer_detail_7.html" class="artist-card">
+            <img src="../images/CrimsonWaves.webp" alt="Crimson Waves" class="artist-image">
+            <div class="artist-name">Crimson Waves</div>
+            <div class="artist-desc">(ハードロック/メタルバンド)</div>
+          </a>
 
-                <div class="artist-card">
-                    <img src="https://placehold.co/300x180/EEE/31343C" alt="Horizon Strings" class="artist-image">
-                    <div class="artist-name">Horizon Strings</div>
-                    <div class="artist-desc">(室内オーケストラ)</div>
-                </div>
-            </div>
-        </section>
+          <a href="performer_detail_8.html" class="artist-card">
+            <img src="../images/宮本サクラ.webp" alt="宮本サクラ" class="artist-image">
+            <div class="artist-name">宮本サクラ</div>
+            <div class="artist-desc">(シンガー/パフォーマー)</div>
+          </a>
+
+          <a href="performer_detail_9.html" class="artist-card">
+            <img src="../images/森下晴人.webp" alt="森下晴人" class="artist-image">
+            <div class="artist-name">森下晴人</div>
+            <div class="artist-desc">(エレクトロニカアーティスト)</div>
+          </a>
+
+          <a href="performer_detail_10.html" class="artist-card">
+            <img src="../images/風雅.webp" alt="風雅" class="artist-image">
+            <div class="artist-name">風雅(ふうが)</div>
+            <div class="artist-desc">(和楽器バンド)</div>
+          </a>
+
+          <a href="performer_detail_11.html" class="artist-card">
+            <img src="../images/NeonLights.webp" alt="Neon Lights" class="artist-image">
+            <div class="artist-name">Neon Lights</div>
+            <div class="artist-desc">(ソウル/ファンクバンド)</div>
+          </a>
+
+          <a href="performer_detail_12.html" class="artist-card">
+            <img src="../images/HorizonStrings.webp" alt="Horizon Strings" class="artist-image">
+            <div class="artist-name">Horizon Strings</div>
+            <div class="artist-desc">(室内オーケストラ)</div>
+          </a>
+        </div>
+      </section>
     </main>
 
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <a href="../index.html">トップ</a>
+          <a href="performer_list.html">出演者一覧</a>
+          <a href="timetable.html">タイムテーブル</a>
+          <a href="goods.html">グッズ紹介</a>
+          <a href="faq.html">よくある質問</a>
+          <a href="contact_form.html">お問い合わせ</a>
+        </div>
+        <div class="footer-column">
+          <a href="venue.html">会場案内</a>
+          <a href="ticket.html">チケット情報</a>
+          <a href="guide.html">来場者ガイド</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © morijyobi_c_team</p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </div>
 </body>
+
 </html>

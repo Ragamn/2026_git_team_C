@@ -1,0 +1,98 @@
+        /* コンテンツラッパー */
+        .app-wrapper {
+            width: 100%;
+            max-width: 768px;
+            margin: 0 auto;
+            min-height: calc(100vh - 60px - 250px);
+            padding: 1rem;
+        }
+
+        /* モバイル時のナビゲーション非表示 */
+        .nav {
+            display: none;
+        }
+
+        .nav.mobile-open {
+            display: block;
+        }
+
+        .step span {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .step .active {
+            color: #e83e8c;
+            font-weight: bold;
+        }
+
+        .content-box {
+            background-color: transparent;
+            min-height: 220px;
+
+            display: flex;
+            flex-direction: column;
+            /* 縦並び */
+            align-items: flex-start;
+            /* ← 左寄せ */
+            justify-content: flex-start;
+            /* ← 上寄せ */
+
+            font-size: 16px;
+            color: #333;
+        }
+
+
+
+        .btn-submit {
+            background-color: #f7a1c4;
+            border: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #e86aa3;
+        }
+
+        .info-row {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 12px;
+            width: 100%;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: #666;
+        }
+
+        .value {
+            word-break: break-word;
+            padding-left: 8px;
+        }
+
+/* タブレット・ PC表示用メディアクエリ */
+@media (min-width: 768px) {
+    .app-wrapper {
+        padding-top: 0;
+        padding: 2rem;
+    }
+
+    .info-row {
+        flex-direction: row;
+        margin-bottom: 16px;
+    }
+
+    .label {
+        width: 200px;
+        text-align: left;
+        white-space: nowrap;
+        margin-bottom: 0;
+    }
+
+    .value {
+        flex: 1;
+        padding-left: 16px;
+    }
+}

@@ -1,0 +1,87 @@
+/* contact_complete.css - お問い合わせ完了ページのスタイル */
+
+/* モバイル時のナビゲーション非表示 */
+.nav {
+    display: none;
+}
+
+.nav.mobile-open {
+    display: block;
+}
+
+.st-finish-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+}
+
+.st-finish-title-box {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #333;
+}
+
+.st-finish-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+.st-reply-text-box {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.st-reply-text {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.st-btn-back {
+    display: inline-block;
+    background-color: #E55EC1;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: opacity 0.2s;
+    margin-top: 20px;
+}
+
+.st-btn-back:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+/* タブレット・PC表示用 */
+@media (min-width: 768px) {
+    .st-finish-container {
+        padding: 3rem 2rem;
+    }
+
+    .st-finish-title {
+        font-size: 2rem;
+    }
+
+    .st-reply-text {
+        font-size: 1.2rem;
+    }
+
+    .st-reply-text-box {
+        margin-bottom: 50px;
+    }
+
+    .st-btn-back {
+        font-size: 1.2rem;
+        padding: 12px 60px;
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,411 @@
+/* common.css - 共通スタイル（ヘッダー、フッター、ナビゲーション等） */
+
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    background: url('../images/キービジュアル画像.webp') center center / cover no-repeat fixed #000;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* サイドメニュー（タブレット以上で表示） */
+.side-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: calc((100vw - 768px) / 2);
+    height: 100vh;
+    z-index: 500;
+    padding: 2rem 1rem;
+}
+
+/* 画面幅が767px以下でサイドメニューを非表示 */
+@media (max-width: 767px) {
+    .side-nav {
+        display: none !important;
+    }
+}
+
+.side-nav-left {
+    left: 0;
+}
+
+.side-nav-right {
+    right: 0;
+}
+
+.side-nav-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 2rem;
+}
+
+.side-nav-item {
+    text-align: center;
+}
+
+.side-nav-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.5rem;
+    border-bottom: 2px solid transparent;
+}
+
+.side-nav-item a:hover {
+    color: #ff1744;
+    border-bottom: 2px solid #ff1744;
+    transform: translateY(-2px);
+}
+
+.side-nav-item.official-store a {
+    color: #ff1744;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #ff1744;
+}
+
+.side-nav-item.official-store a:hover {
+    color: #ff8a65;
+    border-bottom: 2px solid #ff8a65;
+}
+
+/* スマートフォン表示用のコンテナ */
+.mobile-container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    min-height: 100vh;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ヘッダー */
+.header {
+    background: #FFF0F8;
+    color: #000000;
+    padding: 0.25rem 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 768px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    background: #000000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.logo .date {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    font-weight: normal;
+}
+
+/* ナビゲーション */
+.nav {
+    display: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-list a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-list a:hover {
+    color: #ff1744;
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -4px);
+}
+
+/* モバイルナビゲーション */
+.nav.mobile-open {
+    display: block;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: rgba(255, 255, 255);
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.3s ease;
+    z-index: 1001;
+}
+
+.nav.mobile-open .nav-list {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.nav.mobile-open .nav-list a {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* アニメーション */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* フッター */
+.footer {
+    background: #FFE1F4;
+    color: #000000;
+    padding: 2rem 0 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.footer-column a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: opacity 0.3s ease;
+}
+
+.footer-column a:hover {
+    opacity: 0.8;
+}
+
+.copyright {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0 1rem;
+}
+
+.copyright p {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* フッターのレスポンシブ対応 */
+@media (max-width: 375px) {
+    .footer-grid {
+        padding: 0 0.75rem;
+        gap: 1.5rem;
+    }
+    
+    .footer-column a {
+        font-size: 0.75rem;
+    }
+    
+    .copyright p {
+        font-size: 0.7rem;
+    }
+    
+    /* ヘッダーの調整 */
+    .header-container {
+        padding: 0 0.5rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+    
+    .logo .date {
+        font-size: 0.6rem;
+    }
+    
+    .hamburger {
+        padding: 0.25rem;
+    }
+    
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+    }
+}
+
+/* 小さいモバイル画面（320px - 374px）での追加調整 */
+@media (max-width: 320px) {
+    .logo h1 {
+        font-size: 1rem;
+    }
+    
+    .logo .date {
+        font-size: 0.55rem;
+    }
+}
+
+/* タブレット以上のサイズ（768px以上でサイドメニュー表示） */
+@media (min-width: 768px) {
+    .mobile-container {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    
+    /* ヘッダーを非表示 */
+    .header {
+        display: none;
+    }
+    
+    /* サイドメニューを表示 */
+    .side-nav {
+        display: block;
+    }
+    
+    /* サイドメニューの幅調整 */
+    .side-nav {
+        width: calc((100vw - 768px) / 2);
+    }
+    
+    /* メインコンテンツのマージン調整 */
+    .main {
+        margin-top: 0;
+    }
+}
+
+/* モバイル表示での調整 */
+@media (max-width: 767px) {
+    .mobile-container {
+        max-width: 100%;
+        box-shadow: none;
+    }
+    
+    .header {
+        left: 0;
+        transform: none;
+        width: 100%;
+        max-width: none;
+        background: #FFF0F8;
+        height: 60px;
+    }
+    
+    .nav.mobile-open {
+        left: 0;
+        transform: none;
+        max-width: none;
+        width: 100%;
+    }
+    
+    .main {
+        margin-top: 60px;
+        min-height: calc(100vh - 60px - 200px);
+        padding-top: 0;
+    }
+}
+
+/* タブレットサイズ（768px～1023px）での調整 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .mobile-container {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    
+    .side-nav {
+        width: calc((100vw - 768px) / 2);
+        min-width: 100px;
+    }
+}
+
+/* デスクトップサイズ（1024px以上）での調整 */
+@media (min-width: 1024px) {
+    .mobile-container {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    
+    .side-nav {
+        width: calc((100vw - 768px) / 2);
+        min-width: 150px;
+    }
+}
