@@ -3,34 +3,22 @@ body {
   padding: 0;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   color: #333;
+  width: 100%;
+  max-width: 768px;
 }
 
-
-header {
-  background-color: #FFE1F4;
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-header h1,header p{
-  font-size: 2rem;
-  color: #474747;
-}
 h1,
 p {
   margin: 0;
   font-size: 0.7rem;
   color: #363636;
-  letter-spacing: 0.05em;
 }
 
 
-/* 全体コンテナ */
-.tab-switch {
-  max-width: 100%;
-  width: 100%;
+* 全体コンテナ */ .tab-switch {
+  max-width: 800px;
   margin: 20px auto;
+  padding-top: 1rem;
 }
 
 /* ラジオボタンは隠す */
@@ -120,4 +108,56 @@ th, td {
 
 th {
   background-color: #f9f9f9;
+}
+
+/* メインコンテンツのスタイル */
+.main {
+  padding: 20px 15px;
+  margin-top: 60px;
+  min-height: calc(100vh - 60px - 250px);
+}
+
+/* モバイル表示での調整 */
+@media (max-width: 767px) {
+  .main {
+    margin-top: 60px;
+  }
+  
+  .tab-switch {
+    padding: 0 10px;
+  }
+  
+  table {
+    font-size: 0.8rem;
+  }
+  
+  th, td {
+    padding: 6px 2px;
+  }
+}
+
+/* タブレット以上のサイズ */
+@media (min-width: 768px) {
+  .main {
+    margin-top: 0;
+    padding: 40px 30px;
+  }
+  
+  .tab-switch {
+    max-width: 100%;
+    padding-top: 0;
+  }
+  
+  table {
+    font-size: 1rem;
+  }
+  
+  th, td {
+    padding: 12px 8px;
+  }
+  
+  .tab-buttons label {
+    font-size: 1.1rem;
+    padding: 0.8em 3em;
+  }
 }

@@ -230,6 +230,8 @@ body {
     background: #FFE1F4;
     color: #000000;
     padding: 2rem 0 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .footer-grid {
@@ -289,6 +291,39 @@ body {
     .copyright p {
         font-size: 0.7rem;
     }
+    
+    /* ヘッダーの調整 */
+    .header-container {
+        padding: 0 0.5rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+    
+    .logo .date {
+        font-size: 0.6rem;
+    }
+    
+    .hamburger {
+        padding: 0.25rem;
+    }
+    
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+    }
+}
+
+/* 小さいモバイル画面（320px - 374px）での追加調整 */
+@media (max-width: 320px) {
+    .logo h1 {
+        font-size: 1rem;
+    }
+    
+    .logo .date {
+        font-size: 0.55rem;
+    }
 }
 
 /* タブレット以上のサイズ（768px以上でサイドメニュー表示） */
@@ -332,6 +367,7 @@ body {
         width: 100%;
         max-width: none;
         background: #FFF0F8;
+        height: 60px;
     }
     
     .nav.mobile-open {
@@ -342,7 +378,9 @@ body {
     }
     
     .main {
-        margin-top: 50px;
+        margin-top: 60px;
+        min-height: calc(100vh - 60px - 200px);
+        padding-top: 0;
     }
 }
 

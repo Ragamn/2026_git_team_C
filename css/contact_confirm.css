@@ -1,12 +1,19 @@
-        body {
-            display: flex;
-            justify-content: center;
-            background-color: #ffffff;
+        /* コンテンツラッパー */
+        .app-wrapper {
+            width: 100%;
+            max-width: 768px;
+            margin: 0 auto;
+            min-height: calc(100vh - 60px - 250px);
+            padding: 1rem;
         }
 
-        /* 357px固定 */
-        .app-wrapper {
-            width: 357px;
+        /* モバイル時のナビゲーション非表示 */
+        .nav {
+            display: none;
+        }
+
+        .nav.mobile-open {
+            display: block;
         }
 
         .step span {
@@ -21,7 +28,7 @@
 
         .content-box {
             background-color: transparent;
-            height: 220px;
+            min-height: 220px;
 
             display: flex;
             flex-direction: column;
@@ -49,20 +56,43 @@
 
         .info-row {
             display: flex;
-            margin-bottom: 8px;
+            flex-direction: column;
+            margin-bottom: 12px;
+            width: 100%;
         }
 
         .label {
-
-            width: 160px;
-            text-align: left;
-            /* ←ここで揃う！ */
             font-weight: bold;
-            white-space: nowrap;
+            margin-bottom: 4px;
+            color: #666;
         }
 
         .value {
-            flex: 1;
-            /* ← ここ重要 */
-            text-align: left;
+            word-break: break-word;
+            padding-left: 8px;
         }
+
+/* タブレット・ PC表示用メディアクエリ */
+@media (min-width: 768px) {
+    .app-wrapper {
+        padding-top: 0;
+        padding: 2rem;
+    }
+
+    .info-row {
+        flex-direction: row;
+        margin-bottom: 16px;
+    }
+
+    .label {
+        width: 200px;
+        text-align: left;
+        white-space: nowrap;
+        margin-bottom: 0;
+    }
+
+    .value {
+        flex: 1;
+        padding-left: 16px;
+    }
+}

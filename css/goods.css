@@ -3,13 +3,15 @@
 /* メインコンテンツ */
 .main {
     margin-top: 60px;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     background-color: #fff;
+    min-height: calc(100vh - 60px - 250px);
 }
 
 /* グッズセクション */
 .goods-section {
     padding: 2rem 1rem;
+    padding-top: 2.5rem;
 }
 
 .goods-grid {
@@ -78,6 +80,10 @@
 @media (min-width: 768px) {
     .main {
         margin-top: 0;
+    }
+
+    .goods-section {
+        padding-top: 2rem;
     }
 
     .goods-grid {
