@@ -18,6 +18,7 @@ p {
 * 全体コンテナ */ .tab-switch {
   max-width: 800px;
   margin: 20px auto;
+  padding-top: 1rem;
 }
 
 /* ラジオボタンは隠す */
@@ -113,6 +114,7 @@ th {
 .main {
   padding: 20px 15px;
   margin-top: 60px;
+  min-height: calc(100vh - 60px - 250px);
 }
 
 /* モバイル表示での調整 */
@@ -143,6 +145,7 @@ th {
   
   .tab-switch {
     max-width: 100%;
+    padding-top: 0;
   }
   
   table {

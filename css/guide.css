@@ -9,24 +9,7 @@ body {
 }
 
 
-header {
-  background-color: #FFE1F4; /* タイムテーブルと同じ背景色 */
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-header h1 {
-  font-size: 1.8rem;
-  color: #474747;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1rem;
-  color: #474747;
-  font-weight: bold;
-}
+/* ヘッダーはcommon.cssで管理されているため削除 */
 
 
 body > h1 {
@@ -85,6 +68,12 @@ li {
   list-style-type: disc;
 }
 
+/* ヘッダー内のリストには点をつけない */
+.header li,
+.nav-list li {
+  list-style-type: none;
+}
+
 p {
   font-size: 0.9rem;
   margin-bottom: 10px;
@@ -120,6 +109,7 @@ section:last-of-type h3:last-of-type {
 .main {
   padding: 20px 15px;
   margin-top: 60px;
+  min-height: calc(100vh - 60px - 250px);
 }
 
 /* モバイル表示での調整 */
@@ -131,6 +121,7 @@ section:last-of-type h3:last-of-type {
   body > h1 {
     font-size: 1rem;
     padding: 15px;
+    padding-top: 1.5rem;
   }
   
   section {
@@ -156,6 +147,7 @@ section:last-of-type h3:last-of-type {
   body > h1 {
     font-size: 1.3rem;
     padding: 30px;
+    padding-top: 30px;
   }
   
   section {

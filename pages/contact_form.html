@@ -88,11 +88,11 @@
     <!-- メインコンテンツ -->
     <main class="main">
       <div class="form-container">
-        <form action="#">
+        <form id="contactForm">
 
             <div class="form-group">
                 <label>・お問い合わせ種別</label>
-                <select>
+                <select name="category" id="category">
                     <option value="">選択してください</option>
                     <option value="ticket">チケットについて</option>
                     <option value="stage">会場について</option>
@@ -102,22 +102,22 @@
             </div>
             <div class="form-group">
                 <label>・名前 (必須)</label>
-                <input type="text" class="input-gray">
+                <input type="text" class="input-gray" name="name" id="name" required>
             </div>
 
             <div class="form-group">
                 <label>・メールアドレス (必須)</label>
-                <input type="email" class="input-gray" autofocus>
+                <input type="email" class="input-gray" name="email" id="email" required autofocus>
             </div>
 
             <div class="form-group">
                 <label>・電話番号(任意)</label>
-                <input type="tel" class="input-gray">
+                <input type="tel" class="input-gray" name="phone" id="phone">
             </div>
 
             <div class="form-group">
                 <label>・お問い合わせ内容</label>
-                <textarea class="input-gray"></textarea>
+                <textarea class="input-gray" name="message" id="message" required></textarea>
             </div>
 
             <div class="btn-area">
@@ -127,13 +127,6 @@
         </form>
       </div>
     </main>
-
-    <!-- 固定チケットボタン -->
-    <div class="ticket-button-fixed">
-      <a href="ticket.html">
-        <span class="ticket-text">TICKET</span>
-      </a>
-    </div>
 
     <!-- フッター -->
     <footer class="footer">
@@ -159,6 +152,26 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // フォームデータを取得
+        const formData = {
+          category: document.getElementById('category').value,
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          message: document.getElementById('message').value
+        };
+        
+        // セッションストレージに保存
+        sessionStorage.setItem('contactFormData', JSON.stringify(formData));
+        
+        // 確認ページへ遷移
+        window.location.href = 'contact_confirm.html';
+      });
+    </script>
   </div>
 </body>
 

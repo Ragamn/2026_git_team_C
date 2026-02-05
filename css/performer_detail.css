@@ -3,6 +3,7 @@
 
 .center {
     text-align: center;
+    padding-top: 1rem;
 }
 
 .maincolor {
@@ -14,7 +15,7 @@
     width: 400px;
     height: 200px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 0;
 }
 
 .image img {
@@ -65,8 +66,8 @@
     opacity: 0.7; 
 }
 
-/* モバイル対応 */
-@media screen and (max-width: 375px) {
+/* モバイル・タブレット対応 */
+@media screen and (max-width: 767px) {
     .content {
         flex-direction: column;
     }
@@ -76,7 +77,9 @@
     }
     
     .image {
-        width: 100%; 
+        width: 100%;
+        max-width: 350px;
+        height: auto;
     }
 
     .link-container {
@@ -88,5 +91,17 @@
         position: static; 
         width: 100%;
         text-align: center; 
+    }
+
+    .flex {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+}
+
+/* PC表示用メディアクエリ */
+@media (min-width: 768px) {
+    .center {
+        padding-top: 0;
     }
 }
