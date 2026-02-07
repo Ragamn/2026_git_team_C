@@ -2,12 +2,18 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせ内容の確認 - Spring Music Festival '26</title>
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/contact_confirm.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ内容の確認 - Spring Music Festival '26</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/contact_confirm.css">
 </head>
 
 <body>
@@ -92,50 +98,50 @@
 
         <div class="text-center border rounded p-3 mt-4">
 
-            <!-- タイトル -->
-            <h5 class="mb-2">お問い合わせ内容の確認</h5>
+          <!-- タイトル -->
+          <h5 class="mb-2">お問い合わせ内容の確認</h5>
 
 
-            <hr>
+          <hr>
 
-            <!-- 内容表示エリア -->
-            <div class="content-box my-3 p-3">
+          <!-- 内容表示エリア -->
+          <div class="content-box my-3 p-3">
 
-                <div class="info-row">
-                    <span class="label">お問い合わせ種別：</span>
-                    <span class="value" id="displayCategory"></span>
-                </div>
-
-                <div class="info-row">
-                    <span class="label">お名前：</span>
-                    <span class="value" id="displayName"></span>
-                </div>
-
-                <div class="info-row">
-                    <span class="label">メールアドレス：</span>
-                    <span class="value" id="displayEmail"></span>
-                </div>
-
-                <div class="info-row">
-                    <span class="label">電話番号：</span>
-                    <span class="value" id="displayPhone"></span>
-                </div>
-
-                <div class="info-row">
-                    <span class="label">お問い合わせ内容：</span>
-                    <span class="value" id="displayMessage"></span>
-                </div>
-
+            <div class="info-row">
+              <span class="label">お問い合わせ種別：</span>
+              <span class="value" id="displayCategory"></span>
             </div>
 
-
-
-
-            <!-- ボタン -->
-            <div class="d-flex justify-content-between">
-                <button class="btn btn-outline-secondary px-4" id="backBtn">戻る</button>
-                <button class="btn btn-submit px-4" id="submitBtn">送信</button>
+            <div class="info-row">
+              <span class="label">お名前：</span>
+              <span class="value" id="displayName"></span>
             </div>
+
+            <div class="info-row">
+              <span class="label">メールアドレス：</span>
+              <span class="value" id="displayEmail"></span>
+            </div>
+
+            <div class="info-row">
+              <span class="label">電話番号：</span>
+              <span class="value" id="displayPhone"></span>
+            </div>
+
+            <div class="info-row">
+              <span class="label">お問い合わせ内容：</span>
+              <span class="value" id="displayMessage"></span>
+            </div>
+
+          </div>
+
+
+
+
+          <!-- ボタン -->
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-outline-secondary px-4" id="backBtn">戻る</button>
+            <button class="btn btn-submit px-4" id="submitBtn">送信</button>
+          </div>
 
         </div>
       </div>
@@ -168,7 +174,7 @@
     <script>
       // セッションストレージからデータを取得して表示
       const formData = JSON.parse(sessionStorage.getItem('contactFormData'));
-      
+
       if (formData) {
         const categoryMap = {
           'ticket': 'チケットについて',
@@ -176,7 +182,7 @@
           'artist': '出演者について',
           'etc': 'その他'
         };
-        
+
         document.getElementById('displayCategory').textContent = categoryMap[formData.category] || '未選択';
         document.getElementById('displayName').textContent = formData.name;
         document.getElementById('displayEmail').textContent = formData.email;
@@ -186,14 +192,14 @@
         // データがない場合はフォームページに戻る
         window.location.href = 'contact_form.html';
       }
-      
+
       // 戻るボタン
-      document.getElementById('backBtn').addEventListener('click', function() {
+      document.getElementById('backBtn').addEventListener('click', function () {
         window.location.href = 'contact_form.html';
       });
-      
+
       // 送信ボタン
-      document.getElementById('submitBtn').addEventListener('click', function() {
+      document.getElementById('submitBtn').addEventListener('click', function () {
         // セッションストレージをクリア
         sessionStorage.removeItem('contactFormData');
         // 完了ページへ遷移

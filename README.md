@@ -7,7 +7,7 @@ README.md　記載サンプル
 本プロジェクトは、GitとGitHubを用いたチーム開発演習を目的としています。静的なHTML/CSSを用いて、架空のFESの公式サイトを構築します。
 
 * *プロジェクトの目的:* Gitフローに基づいたチーム開発ワークフローの習得。
-* *公開URL (GitHub Pages):* https://github.com/Ragamn/2026_git_team_C
+* *公開URL (GitHub Pages):* https://ragamn.github.io/2026_git_team_C/
 
 ---
 
